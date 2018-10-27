@@ -1,0 +1,101 @@
+09-30-2018 @ 14:54:25 - Processing order started (order id: 2148)
+09-30-2018 @ 14:54:28 - REQUEST: 
+09-30-2018 @ 14:54:28 - Array
+(
+    [USER] => ***
+    [PWD] => ***
+    [VERSION] => 64
+    [SIGNATURE] => ***
+    [METHOD] => SetExpressCheckout
+    [RETURNURL] => http://localhost/motors/?page_id=2146&order_id=2148&subscriptio_ppec_action=do_payment
+    [CANCELURL] => http://localhost/motors/?page_id=2145&cancel_order=true&order=wc_order_5bb0e0ac6259b&order_id=2148&redirect&_wpnonce=236fb64a22
+    [NOSHIPPING] => 1
+    [LOCALECODE] => en_US
+    [EMAIL] => mob2488@hotmail.com
+    [TOTALTYPE] => Total
+    [L_BILLINGTYPE0] => MerchantInitiatedBilling
+    [L_PAYMENTTYPE0] => Any
+    [PAYMENTREQUEST_0_AMT] => 10.00
+    [PAYMENTREQUEST_0_CURRENCYCODE] => GBP
+    [PAYMENTREQUEST_0_PAYMENTACTION] => Sale
+    [PAYMENTREQUEST_0_NOTIFYURL] => http://localhost/motors/?wc-api=Subscriptio_PayPal_EC_Gateway
+    [PAYMENTREQUEST_0_CUSTOM] => a:1:{s:8:"order_id";i:2148;}
+    [PAYMENTREQUEST_0_SHIPPINGAMT] => 0.00
+    [PAYMENTREQUEST_0_TAXAMT] => 0.00
+    [PAYMENTREQUEST_0_ITEMAMT] => 10.00
+    [L_PAYMENTREQUEST_0_NAME0] => nooj
+    [L_PAYMENTREQUEST_0_QTY0] => 1
+    [L_PAYMENTREQUEST_0_AMT0] => 10
+    [L_PAYMENTREQUEST_0_NUMBER0] => 
+)
+
+09-30-2018 @ 14:54:28 - RESPONSE: 
+09-30-2018 @ 14:54:28 - Array
+(
+    [TOKEN] => EC-8T423781G0908521R
+    [TIMESTAMP] => 2018-09-30T14:54:27Z
+    [CORRELATIONID] => 65144507d3216
+    [ACK] => Success
+    [VERSION] => 64
+    [BUILD] => 000000
+)
+
+09-30-2018 @ 14:54:28 - Express Checkout is set, redirecting to PayPal
+09-30-2018 @ 14:56:04 - Starting Do Express Checkout process
+09-30-2018 @ 14:56:09 - REQUEST: 
+09-30-2018 @ 14:56:09 - Array
+(
+    [USER] => ***
+    [PWD] => ***
+    [VERSION] => 64
+    [SIGNATURE] => ***
+    [METHOD] => DoExpressCheckoutPayment
+    [TOKEN] => EC-8T423781G0908521R
+    [PAYERID] => 7KZM4G34HGJZN
+    [AMT] => 10.00
+    [PAYMENTACTION] => Sale
+    [CURRENCYCODE] => GBP
+    [PAYMENTREQUEST_0_AMT] => 10.00
+    [PAYMENTREQUEST_0_CURRENCYCODE] => GBP
+    [PAYMENTREQUEST_0_PAYMENTACTION] => Sale
+    [PAYMENTREQUEST_0_NOTIFYURL] => http://localhost/motors/?wc-api=Subscriptio_PayPal_EC_Gateway
+    [PAYMENTREQUEST_0_CUSTOM] => a:1:{s:8:"order_id";i:2148;}
+    [PAYMENTREQUEST_0_SHIPPINGAMT] => 0.00
+    [PAYMENTREQUEST_0_TAXAMT] => 0.00
+    [PAYMENTREQUEST_0_ITEMAMT] => 10.00
+    [L_PAYMENTREQUEST_0_NAME0] => nooj
+    [L_PAYMENTREQUEST_0_QTY0] => 1
+    [L_PAYMENTREQUEST_0_AMT0] => 10
+    [L_PAYMENTREQUEST_0_NUMBER0] => 
+)
+
+09-30-2018 @ 14:56:09 - RESPONSE: 
+09-30-2018 @ 14:56:09 - Array
+(
+    [TOKEN] => EC-8T423781G0908521R
+    [BILLINGAGREEMENTID] => B-2BU22743YP187070A
+    [SUCCESSPAGEREDIRECTREQUESTED] => false
+    [TIMESTAMP] => 2018-09-30T14:56:08Z
+    [CORRELATIONID] => b01b9ef82e5b7
+    [ACK] => Success
+    [VERSION] => 64
+    [BUILD] => 000000
+    [INSURANCEOPTIONSELECTED] => false
+    [SHIPPINGOPTIONISDEFAULT] => false
+    [PAYMENTINFO_0_TRANSACTIONID] => 5T730241RF840052E
+    [PAYMENTINFO_0_TRANSACTIONTYPE] => cart
+    [PAYMENTINFO_0_PAYMENTTYPE] => instant
+    [PAYMENTINFO_0_ORDERTIME] => 2018-09-30T14:56:07Z
+    [PAYMENTINFO_0_AMT] => 10.00
+    [PAYMENTINFO_0_TAXAMT] => 0.00
+    [PAYMENTINFO_0_CURRENCYCODE] => GBP
+    [PAYMENTINFO_0_PAYMENTSTATUS] => Pending
+    [PAYMENTINFO_0_PENDINGREASON] => multicurrency
+    [PAYMENTINFO_0_REASONCODE] => None
+    [PAYMENTINFO_0_PROTECTIONELIGIBILITY] => Eligible
+    [PAYMENTINFO_0_SELLERPAYPALACCOUNTID] => mob2488-facilitator@hotmail.com
+    [PAYMENTINFO_0_ERRORCODE] => 0
+    [PAYMENTINFO_0_ACK] => Success
+)
+
+09-30-2018 @ 14:56:09 - Payment operation completed (payment status: Pending, transaction id: 5T730241RF840052E) Pending reason: multicurrency (You do not have a balance in the currency sent, and you do not have your Payment Receiving Preferences set to automatically convert and accept this payment. You must manually accept or deny this payment.)

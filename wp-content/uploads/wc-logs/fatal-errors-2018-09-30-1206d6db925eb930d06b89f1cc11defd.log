@@ -1,0 +1,11 @@
+2018-09-30T13:07:43+00:00 CRITICAL Uncaught Error: Call to undefined function stm_user_active_subscriptions() in C:\xampp\htdocs\motors\wp-content\themes\motors\partials\user\private\mobile\user-profile.php:42
+Stack trace:
+#0 C:\xampp\htdocs\motors\wp-includes\template.php(690): require()
+#1 C:\xampp\htdocs\motors\wp-includes\template.php(647): load_template('C:\\xampp\\htdocs...', false)
+#2 C:\xampp\htdocs\motors\wp-includes\general-template.php(155): locate_template(Array, true, false)
+#3 C:\xampp\htdocs\motors\wp-content\themes\motors\partials\user\private\mobile\user.php(38): get_template_part('partials/user/p...', 'profile')
+#4 C:\xampp\htdocs\motors\wp-includes\template.php(690): require('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\motors\wp-includes\template.php(647): load_template('C:\\xampp\\htdocs...', false)
+#6 C:\xampp\htdocs\motors\wp-includes\general-template.php(155): locate_template(Array, true, false)
+#7 C:\xampp\htdocs\motors\wp-content\themes\motors\partials\header\header-listing.php(80): get_template_part('partials/user/p...'
+
