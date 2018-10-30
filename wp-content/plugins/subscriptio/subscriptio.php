@@ -210,7 +210,7 @@ class Subscriptio
         add_filter('posts_groupby', array($this, 'expand_list_search_context_group_by'));
         add_action('woocommerce_before_checkout_form', array($this, 'enforce_registration'), 99);
         add_action('woocommerce_checkout_process', array($this, 'enforce_createaccount_option'), 99);
-        add_filter('woocommerce_get_script_data', array($this, 'enforce_registration_js'), 99);
+        add_filter('wc_checkout_params', array($this, 'enforce_registration_js'), 99);
         add_action('before_delete_post', array($this, 'post_deleted_event'));
         add_action('save_post', array($this, 'save_subscription_meta_box'), 9, 2);
         add_action('init', array($this, 'maybe_save_main_site_url'), 1);

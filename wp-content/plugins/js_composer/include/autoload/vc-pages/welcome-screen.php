@@ -79,7 +79,7 @@ function vc_page_welcome_set_redirect() {
 function vc_page_welcome_redirect() {
 	$redirect = get_transient( '_vc_page_welcome_redirect' );
 	delete_transient( '_vc_page_welcome_redirect' );
-	$redirect && wp_redirect( admin_url( 'admin.php?page=' . rawurlencode( vc_page_welcome_slug() ) ) );
+	//$redirect && wp_redirect( admin_url( 'admin.php?page=' . rawurlencode( vc_page_welcome_slug() ) ) );
 }
 
 // Enables redirect on activation.

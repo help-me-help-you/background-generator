@@ -1,12 +1,12 @@
 <?php
 /*
 Plugin Name: STM Post Type
-Plugin URI: http://stylemixthemes.com/
+Plugin URI: https://stylemixthemes.com/
 Description: STM Post Type
 Author: Stylemix Themes
-Author URI: http://stylemixthemes.com/
+Author URI: https://stylemixthemes.com/
 Text Domain: stm-post-type
-Version: 3.2
+Version: 4.0
 */
 
 define( 'STM_POST_TYPE', 'stm-post-type' );
@@ -150,7 +150,16 @@ if(get_option('stm_motors_chosen_template') == 'motorcycle') {
 	);
 }
 
-STM_PostType::addMetaBox( 'page_options', __( 'Page Options', STM_POST_TYPE ), array( 'page', 'post', 'listings', 'product' ), '', '', '', array(
+if(get_option('stm_motors_chosen_template') == 'car_magazine') {
+    STM_PostType::addMetaBox( 'video_url', __( 'Set Youtube Url', STM_POST_TYPE ), array( 'post'), '', 'side', '', array(
+        'fields' => array('video_url' => array(
+            'label'   => __( 'Url', STM_POST_TYPE ),
+            'type'    => 'text'
+        ))
+    ) );
+}
+
+STM_PostType::addMetaBox( 'page_options', __( 'Page Options', STM_POST_TYPE ), array( 'page', 'post', 'listings', 'product', 'stm_events', 'stm_review' ), '', '', '', array(
 	'fields' => $title_box_opt
 ) );
 
@@ -174,6 +183,13 @@ STM_PostType::addMetaBox( 'test_drive_form', __( 'Credentials', STM_POST_TYPE ),
 		),
 	)
 ));
+
+
+if(function_exists('stm_is_magazine') && stm_is_magazine()) {
+    /*STM_PostType::addMetaBox( 'page_options', __( 'Page Options', STM_POST_TYPE ), array( 'page', 'post', 'listings', 'product', 'stm_events', 'stm_review' ), '', '', '', array(
+        'fields' => $title_box_opt
+    ) );*/
+}
 
 $args = array('post_type' => 'wpcf7_contact_form', 'posts_per_page' => -1);
 $available_cf7 = array();

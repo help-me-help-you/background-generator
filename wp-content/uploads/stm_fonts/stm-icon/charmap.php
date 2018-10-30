@@ -1,4 +1,5 @@
 <?php $icons = array();
+$icons['stm-icon']['ico_mag_reviews'] = array("class"=>'ico_mag_reviews',"tags"=>'ico_mag_reviews');
 $icons['stm-icon']['barrette'] = array("class"=>'barrette',"tags"=>'barrette');
 $icons['stm-icon']['buoy-2'] = array("class"=>'buoy-2',"tags"=>'buoy-2');
 $icons['stm-icon']['buoy'] = array("class"=>'buoy',"tags"=>'buoy');

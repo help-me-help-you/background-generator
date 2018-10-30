@@ -1,0 +1,18 @@
+2018-10-28T22:30:10+00:00 CRITICAL Maximum execution time of 60 seconds exceeded in C:\xampp\htdocs\motors\background-generator\wp-includes\wp-db.php on line 1924
+
+2018-10-28T22:33:02+00:00 CRITICAL Cannot redeclare stm_demo_import_content() (previously declared in C:\xampp\htdocs\motors\background-generator\wp-content\plugins\stm_importer\stm-importer.php:141) in C:\xampp\htdocs\motors\background-generator\wp-content\plugins\stm_importer\stm_importer.php on line 55
+
+2018-10-28T22:33:09+00:00 CRITICAL Cannot redeclare stm_demo_import_content() (previously declared in C:\xampp\htdocs\motors\background-generator\wp-content\plugins\stm_importer\stm-importer.php:141) in C:\xampp\htdocs\motors\background-generator\wp-content\plugins\stm_importer\stm_importer.php on line 55
+
+2018-10-28T22:33:10+00:00 CRITICAL Cannot redeclare stm_demo_import_content() (previously declared in C:\xampp\htdocs\motors\background-generator\wp-content\plugins\stm_importer\stm-importer.php:141) in C:\xampp\htdocs\motors\background-generator\wp-content\plugins\stm_importer\stm_importer.php on line 55
+
+2018-10-28T23:32:59+00:00 CRITICAL Uncaught Error: Call to undefined function stm_user_active_subscriptions() in C:\xampp\htdocs\motors\background-generator\wp-content\themes\motors\partials\user\private\mobile\user-profile.php:42
+Stack trace:
+#0 C:\xampp\htdocs\motors\background-generator\wp-includes\template.php(690): require()
+#1 C:\xampp\htdocs\motors\background-generator\wp-includes\template.php(647): load_template('C:\\xampp\\htdocs...', false)
+#2 C:\xampp\htdocs\motors\background-generator\wp-includes\general-template.php(155): locate_template(Array, true, false)
+#3 C:\xampp\htdocs\motors\background-generator\wp-content\themes\motors\partials\user\private\mobile\user.php(38): get_template_part('partials/user/p...', 'profile')
+#4 C:\xampp\htdocs\motors\background-generator\wp-includes\template.php(690): require('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\motors\background-generator\wp-includes\template.php(647): load_template('C:\\xampp\\htdocs...', false)
+#6 C:\xampp\htdocs\motors\background-generator\wp-includes\general-template.php(155 in C:\xampp\htdocs\motors\background-generator\wp-content\themes\motors\partials\user\private\mobile\user-profile.php on line 42
+

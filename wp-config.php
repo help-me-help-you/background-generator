@@ -77,7 +77,7 @@ $table_prefix  = 'wp_';
  *
  * @link https://codex.wordpress.org/Debugging_in_WordPress
  */
-define('WP_DEBUG', true);
+define('WP_DEBUG', false);
 define('WP_MEMORY_LIMIT', '512M');
 define('WP_POST_REVISIONS', 2);
 define('DISABLE_WP_CRON', true);

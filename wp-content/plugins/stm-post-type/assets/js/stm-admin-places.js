@@ -25,6 +25,8 @@
                     lng = '';
                 }
 
+                console.log(lat + " -- " + lng);
+
                 $('input[name="stm_lat_car_admin"]').val(lat);
                 $('input[name="stm_lng_car_admin"]').val(lng);
             });

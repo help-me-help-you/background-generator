@@ -23,6 +23,16 @@ if( ! function_exists( 'stm_post_types_options' ) ){
 			'plural_title' => __( 'Listings', STM_POST_TYPE ),
 			'rewrite' => 'listings'
 		),
+		'stm_events' => array(
+			'title' => __( 'Events', STM_POST_TYPE ),
+			'plural_title' => __( 'Events', STM_POST_TYPE ),
+			'rewrite' => 'events'
+		),
+		'stm_review' => array(
+			'title' => __( 'Review', STM_POST_TYPE ),
+			'plural_title' => __( 'Review', STM_POST_TYPE ),
+			'rewrite' => 'review'
+		),
 	);
 
 	$options = wp_parse_args( $options, $defaultPostTypesOptions );

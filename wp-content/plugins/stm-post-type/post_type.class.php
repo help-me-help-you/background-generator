@@ -61,7 +61,54 @@ class STM_PostType {
 	public static function register_custom_post_types() {
 		foreach ( self::$PostTypes as $postType => $args ) {
 			register_post_type( $postType, $args );
+
+			if (!empty($args['sub_types'])) {
+				foreach ($args['sub_types'] as $args) {
+					$sub_type = $args;
+					$sub_labels = self::post_type_labels($sub_type['name'], $sub_type['plural']);
+
+					$sub_args = array(
+						'labels'             => $sub_labels,
+						'public'             => false,
+						'publicly_queryable' => false,
+						'show_ui'            => true,
+						'show_in_menu'       => 'edit.php?post_type=' . $postType,
+						'query_var'          => false,
+						'rewrite'            => array('slug' => $sub_type['slug']),
+						'capability_type'    => 'post',
+						'has_archive'        => false,
+						'hierarchical'       => false,
+						'supports'           => $sub_type['supports']
+					);
+
+					register_post_type($sub_type['slug'], $sub_args);
+				}
+			}
 		}
+	}
+
+	private function post_type_labels($name, $plural)
+	{
+		$name = sanitize_text_field($name);
+		$plural = sanitize_text_field($plural);
+		$labels = array(
+			'name'               => sprintf(__('%s', 'stm_domain'), $plural),
+			'singular_name'      => sprintf(__('%s', 'stm_domain'), $name),
+			'menu_name'          => sprintf(__('%s', 'stm_domain'), $plural),
+			'name_admin_bar'     => sprintf(__('%s', 'stm_domain'), $name),
+			'add_new'            => __('Add New', 'stm_domain'),
+			'add_new_item'       => sprintf(__('Add new %s', 'stm_domain'), $name),
+			'new_item'           => sprintf(__('New %s', 'stm_domain'), $name),
+			'edit_item'          => sprintf(__('Edit %s', 'stm_domain'), $name),
+			'view_item'          => sprintf(__('View %s', 'stm_domain'), $name),
+			'all_items'          => sprintf(__('All %s', 'stm_domain'), $plural),
+			'search_items'       => sprintf(__('Search %s', 'stm_domain'), $plural),
+			'parent_item_colon'  => sprintf(__('Parent %s', 'stm_domain'), $plural),
+			'not_found'          => sprintf(__('No %s found', 'stm_domain'), $plural),
+			'not_found_in_trash' => sprintf(__('No %s found in Trash.', 'stm_domain'), $plural)
+		);
+
+		return apply_filters('stm_post_type_labels', $labels);
 	}
 
 	public static function addMetaBox( $id, $title, $post_types, $callback = '', $context = '', $priority = '', $callback_args = '' ) {
